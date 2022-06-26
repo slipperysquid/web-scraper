@@ -29,6 +29,9 @@ class scraper():
     def getImages(self):#returns a list of image tag objects that are on the webpage
         return self.soup.find_all("img")
 
+    def getTag(self, tag):#returns all instances of a certain html tag
+        return self.soup.find_all(tag)
+
 
     def getTitle(self):#returns the title of the current website
         return self.soup.title.string
